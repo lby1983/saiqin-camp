@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lby1983.github.io/saiqin-camp/sitemap.xml
