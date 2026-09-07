@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>甘加赛钦营地 SAIQIN CAMP · 中国夏河·甘加草原·野奢目的地度假酒店</title>
+<meta name="description" content="甘加赛钦营地（SAIQIN CAMP），位于甘加秘境核心草场，独拥赛钦圣湖，海拔3200米。野奢帐篷、本地美食、秘境之旅。预订电话：0941-7241999。不打扰·不将就。">
+<style>
+  :root{
+    --red:#A6342E;        /* 藏红 */
+    --red-dark:#8A2A25;
+    --khaki:#C8A87C;      /* 大地卡其 */
+    --cream:#F7F4EE;      /* 米白 */
+    --ink:#2E2419;        /* 深咖 */
+    --ink-soft:#5C4F3E;
+    --line:rgba(46,36,25,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'PingFang SC','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Songti SC','STSong','SimSun',Georgia,serif;}
+  img{display:block;max-width:100%;height:auto;}
+
+  /* ===== 顶部导航 ===== */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(46,36,25,.88);
+    backdrop-filter:blur(6px);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 32px;
+  }
+  nav .brand{color:#fff;font-size:15px;letter-spacing:2px;font-weight:600;}
+  nav .brand small{color:rgba(255,255,255,.6);font-size:11px;letter-spacing:1px;margin-left:8px;}
+  nav .links{display:flex;gap:22px;}
+  nav .links a{color:rgba(255,255,255,.85);text-decoration:none;font-size:13px;letter-spacing:1px;transition:color .2s;}
+  nav .links a:hover{color:var(--khaki);}
+  @media(max-width:860px){
+    nav{padding:10px 16px;flex-wrap:wrap;gap:6px;}
+    nav .links{gap:12px;}
+    nav .links a{font-size:12px;}
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;color:#fff;overflow:hidden;
+    background:url('images/hero.jpg') center/cover no-repeat;
+  }
+  .hero::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(30,22,14,.35) 0%,rgba(30,22,14,.18) 50%,rgba(30,22,14,.55) 100%);
+  }
+  .hero .inner{position:relative;z-index:2;padding:0 24px;}
+  .hero .eyebrow{font-size:13px;letter-spacing:6px;color:rgba(255,255,255,.85);text-transform:uppercase;}
+  .hero h1{
+    font-family:'Songti SC','STSong','SimSun',Georgia,serif;
+    font-size:clamp(42px,7vw,88px);font-weight:600;letter-spacing:10px;
+    margin:14px 0 6px;
+  }
+  .hero .sub-en{font-size:13px;letter-spacing:5px;color:rgba(255,255,255,.75);text-transform:uppercase;}
+  .hero .slogan{
+    margin-top:30px;font-family:'Songti SC','STSong','SimSun',Georgia,serif;
+    font-size:clamp(20px,3vw,30px);letter-spacing:8px;color:var(--khaki);
+  }
+  .hero .desc{margin-top:14px;font-size:15px;letter-spacing:3px;color:rgba(255,255,255,.9);}
+  .hero .cta{
+    margin-top:40px;display:inline-block;
+    border:1px solid rgba(255,255,255,.7);color:#fff;text-decoration:none;
+    padding:14px 44px;font-size:15px;letter-spacing:3px;border-radius:2px;
+    transition:all .25s;
+  }
+  .hero .cta:hover{background:var(--red);border-color:var(--red);}
+  .hero .scroll-hint{
+    position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;
+    color:rgba(255,255,255,.65);font-size:12px;letter-spacing:3px;
+  }
+  @media(max-width:600px){.hero h1{letter-spacing:6px;}.hero .slogan{letter-spacing:4px;}}
+
+  /* ===== 通用区块 ===== */
+  section{padding:88px 24px;}
+  .wrap{max-width:1120px;margin:0 auto;}
+  .sec-head{text-align:center;margin-bottom:52px;}
+  .sec-head .tag{font-size:12px;letter-spacing:5px;color:var(--red);text-transform:uppercase;}
+  .sec-head h2{
+    font-family:'Songti SC','STSong','SimSun',Georgia,serif;
+    font-size:clamp(26px,4vw,38px);font-weight:600;letter-spacing:4px;margin-top:8px;
+  }
+  .sec-head .sub{margin-top:12px;color:var(--ink-soft);font-size:14px;letter-spacing:1px;}
+  .sec-head::after{
+    content:'';display:block;width:56px;height:1px;background:var(--khaki);
+    margin:22px auto 0;
+  }
+
+  /* ===== 品牌理念 ===== */
+  .concept{
+    position:relative;color:#fff;text-align:center;
+    background:url('images/concept.jpg') center/cover no-repeat fixed;
+  }
+  @media(max-width:860px){.concept{background-attachment:scroll;}}
+  .concept::before{
+    content:'';position:absolute;inset:0;background:rgba(30,22,14,.62);
+  }
+  .concept .wrap{position:relative;z-index:2;}
+  .concept .big{
+    font-family:'Songti SC','STSong','SimSun',Georgia,serif;
+    font-size:clamp(30px,5vw,52px);letter-spacing:14px;color:var(--khaki);
+  }
+  .concept p{margin-top:26px;font-size:15px;letter-spacing:2px;color:rgba(255,255,255,.92);max-width:760px;margin-left:auto;margin-right:auto;}
+  .concept .en{margin-top:18px;font-size:12px;letter-spacing:1px;color:rgba(255,255,255,.55);}
+
+  /* ===== 照片墙 ===== */
+  .gallery .grid{display:flex;flex-wrap:wrap;gap:14px;}
+  .gallery .grid figure{
+    flex:1 1 220px;min-width:0;position:relative;overflow:hidden;border-radius:6px;
+  }
+  .gallery .grid img{width:100%;height:320px;object-fit:cover;transition:transform .5s;}
+  .gallery .grid figure:hover img{transform:scale(1.04);}
+  .gallery .grid figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;
+    background:linear-gradient(180deg,transparent,rgba(30,22,14,.75));
+    color:#fff;font-size:13px;letter-spacing:2px;
+  }
+  @media(max-width:600px){.gallery .grid img{height:240px;}}
+
+  /* ===== 住宿 ===== */
+  .stay{background:#fff;}
+  .cards{display:flex;flex-wrap:wrap;gap:20px;}
+  .card{
+    flex:1 1 300px;min-width:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;
+    background:var(--cream);
+  }
+  .card img{width:100%;height:220px;object-fit:cover;}
+  .card .body{padding:22px;}
+  .card h3{font-family:'Songti SC','STSong','SimSun',Georgia,serif;font-size:19px;letter-spacing:2px;margin-bottom:10px;}
+  .card p{font-size:13.5px;color:var(--ink-soft);}
+  .split{display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-top:56px;}
+  .split .pic{flex:1 1 380px;min-width:0;}
+  .split .pic img{width:100%;height:380px;object-fit:cover;border-radius:6px;}
+  .split .txt{flex:1 1 380px;min-width:0;}
+  .split h3{font-family:'Songti SC','STSong','SimSun',Georgia,serif;font-size:24px;letter-spacing:3px;margin-bottom:14px;}
+  .split p{font-size:14px;color:var(--ink-soft);max-width:480px;}
+  .split .num{font-family:Georgia,serif;color:var(--khaki);font-size:13px;letter-spacing:2px;margin-top:18px;}
+  @media(max-width:600px){.split .pic img{height:260px;}}
+
+  /* 小图横排（公共空间） */
+  .mini{display:flex;flex-wrap:wrap;gap:14px;margin-top:48px;}
+  .mini .item{flex:1 1 200px;min-width:0;text-align:center;}
+  .mini .item img{width:100%;height:170px;object-fit:cover;border-radius:6px;}
+  .mini .item b{display:block;margin-top:10px;font-size:14px;letter-spacing:2px;}
+  .mini .item span{font-size:12px;color:var(--ink-soft);}
+
+  /* ===== 全图大标语 ===== */
+  .banner{
+    position:relative;color:#fff;text-align:center;padding:96px 24px;
+    background:url('images/lake.jpg') center/cover no-repeat fixed;
+  }
+  @media(max-width:860px){.banner{background-attachment:scroll;}}
+  .banner::before{content:'';position:absolute;inset:0;background:rgba(30,22,14,.55);}
+  .banner .wrap{position:relative;z-index:2;}
+  .banner h2{font-family:'Songti SC','STSong','SimSun',Georgia,serif;font-size:clamp(26px,4vw,40px);letter-spacing:6px;}
+  .banner p{margin-top:16px;font-size:15px;letter-spacing:2px;color:rgba(255,255,255,.9);}
+
+  /* ===== 周边景点 ===== */
+  .spots{display:flex;flex-wrap:wrap;gap:16px;}
+  .spot{flex:1 1 240px;min-width:0;position:relative;border-radius:6px;overflow:hidden;}
+  .spot img{width:100%;height:300px;object-fit:cover;}
+  .spot .cap{
+    position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;
+    background:linear-gradient(180deg,transparent,rgba(30,22,14,.8));
+    color:#fff;
+  }
+  .spot .cap b{font-size:16px;letter-spacing:2px;font-family:'Songti SC','STSong','SimSun',Georgia,serif;}
+  .spot .cap span{display:block;font-size:12px;color:rgba(255,255,255,.8);margin-top:3px;}
+  .spot .dist{
+    position:absolute;top:12px;right:12px;background:var(--red);color:#fff;
+    font-size:12px;padding:4px 10px;border-radius:20px;letter-spacing:1px;
+  }
+
+  /* ===== 体验 ===== */
+  .exp-grid{display:flex;flex-wrap:wrap;gap:20px;}
+  .exp{
+    flex:1 1 300px;min-width:0;background:#fff;border-radius:8px;overflow:hidden;
+    border:1px solid var(--line);
+  }
+  .exp img{width:100%;height:240px;object-fit:cover;}
+  .exp .body{padding:20px;}
+  .exp h3{font-family:'Songti SC','STSong','SimSun',Georgia,serif;font-size:18px;letter-spacing:2px;margin-bottom:8px;}
+  .exp p{font-size:13px;color:var(--ink-soft);}
+
+  /* ===== 生态社区 ===== */
+  .eco{background:var(--ink);color:rgba(255,255,255,.92);}
+  .eco .sec-head h2{color:#fff;}
+  .eco .sec-head .sub{color:rgba(255,255,255,.6);}
+  .eco-grid{display:flex;flex-wrap:wrap;gap:20px;}
+  .eco-item{flex:1 1 300px;min-width:0;border:1px solid rgba(255,255,255,.14);border-radius:8px;overflow:hidden;}
+  .eco-item img{width:100%;height:200px;object-fit:cover;}
+  .eco-item .body{padding:20px;}
+  .eco-item h3{font-family:'Songti SC','STSong','SimSun',Georgia,serif;font-size:17px;letter-spacing:2px;color:var(--khaki);margin-bottom:8px;}
+  .eco-item p{font-size:13px;color:rgba(255,255,255,.75);}
+
+  /* ===== 朋友区 ===== */
+  .friends{position:relative;color:#fff;text-align:center;padding:110px 24px;
+    background:url('images/friends.jpg') center/cover no-repeat fixed;}
+  @media(max-width:860px){.friends{background-attachment:scroll;}}
+  .friends::before{content:'';position:absolute;inset:0;background:rgba(30,22,14,.58);}
+  .friends .wrap{position:relative;z-index:2;max-width:760px;}
+  .friends h2{font-family:'Songti SC','STSong','SimSun',Georgia,serif;font-size:clamp(26px,4vw,38px);letter-spacing:5px;}
+  .friends p{margin-top:18px;font-size:15px;letter-spacing:2px;color:rgba(255,255,255,.92);}
+
+  /* ===== 联系 ===== */
+  .contact{background:#fff;}
+  .contact-grid{display:flex;flex-wrap:wrap;gap:32px;align-items:center;}
+  .contact .info{flex:1 1 360px;min-width:0;}
+  .contact .qr{flex:0 0 200px;text-align:center;}
+  .contact h3{font-family:'Songti SC','STSong','SimSun',Georgia,serif;font-size:22px;letter-spacing:3px;margin-bottom:20px;}
+  .contact .row{margin-bottom:16px;}
+  .contact .row .k{font-size:12px;color:var(--ink-soft);letter-spacing:2px;}
+  .contact .row .v{font-size:16px;margin-top:2px;}
+  .contact .phone{
+    font-family:Georgia,serif;font-size:34px;color:var(--red);letter-spacing:2px;
+    text-decoration:none;display:inline-block;margin-top:4px;
+  }
+  .contact .phone:hover{color:var(--red-dark);}
+  .contact .qr img{width:170px;height:170px;border-radius:8px;margin:0 auto;border:1px solid var(--line);}
+  .contact .qr .cap{font-size:13px;margin-top:10px;letter-spacing:1px;}
+  .contact .qr .cap b{display:block;font-size:14px;color:var(--red);}
+
+  /* ===== 页脚 ===== */
+  footer{background:var(--ink);color:rgba(255,255,255,.7);text-align:center;padding:52px 24px;}
+  footer .brand{font-family:'Songti SC','STSong','SimSun',Georgia,serif;font-size:20px;letter-spacing:6px;color:#fff;}
+  footer .slogan{color:var(--khaki);letter-spacing:4px;font-size:13px;margin-top:8px;}
+  footer .line{width:40px;height:1px;background:var(--khaki);margin:20px auto;}
+  footer .copy{font-size:12px;letter-spacing:1px;}
+</style>
+</head>
+<body>
+
+<!-- 导航 -->
+<nav>
+  <div class="brand">SAIQIN CAMP<small>甘加赛钦营地</small></div>
+  <div class="links">
+    <a href="#concept">品牌理念</a>
+    <a href="#gallery">营地实景</a>
+    <a href="#stay">野奢住宿</a>
+    <a href="#scenery">秘境周边</a>
+    <a href="#experience">深度体验</a>
+    <a href="#eco">生态社区</a>
+    <a href="#contact">联系预订</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="inner">
+    <div class="eyebrow">Ganjia · Gannan · China</div>
+    <h1>甘加赛钦营地</h1>
+    <div class="sub-en">SAIQIN CAMP</div>
+    <div class="slogan">不打扰 · 不将就</div>
+    <div class="desc">中国夏河 · 甘加草原 · 野奢目的地度假酒店</div>
+    <a class="cta" href="#contact">预订咨询</a>
+  </div>
+  <div class="scroll-hint">SCROLL ▼</div>
+</header>
+
+<!-- 品牌理念 -->
+<section class="concept" id="concept">
+  <div class="wrap">
+    <div class="big">不打扰 · 不将就</div>
+    <p>西科文旅的每一个作品，都是这个时代最稀缺的奢侈品。对自然保有最大程度的敬畏，同时也以极致的浪漫满足客人的居住体验。</p>
+    <p style="margin-top:10px;">自然，就是我们最极致的资产。</p>
+    <div class="en">Every creation by Xike Cultural Tourism is one of the rarest luxuries of our time. While showing the utmost respect for nature, it also indulges guests in an exceptionally romantic living experience.</div>
+  </div>
+</section>
+
+<!-- 营地实景 -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Gallery</div>
+      <h2>营地实景</h2>
+      <div class="sub">以上均为甘加赛钦营地实景照片</div>
+    </div>
+    <div class="grid">
+      <figure><img src="images/photo1.jpg" alt="雨后彩虹"><figcaption>雨后彩虹 · 拍摄于营地湖畔 AM11:00</figcaption></figure>
+      <figure><img src="images/photo2.jpg" alt="日落帐篷"><figcaption>湖畔黄昏 · 营地帐篷与经幡</figcaption></figure>
+      <figure><img src="images/photo3.jpg" alt="草原晨曦"><figcaption>草原晨光 · 海拔3200m</figcaption></figure>
+      <figure><img src="images/photo4.jpg" alt="草原落日"><figcaption>草原落日 · 每日20:17（夏季）</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 野奢住宿 -->
+<section class="stay" id="stay">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Stay</div>
+      <h2>野奢住宿</h2>
+      <div class="sub">在荒野里，给你最好的</div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img src="images/tent.jpg" alt="野奢帐篷">
+        <div class="body">
+          <h3>野奢帐篷</h3>
+          <p>采用巴博瑞顶级面料，防风、防雨、防紫外线。室内有地暖、独立卫浴、24小时热水，和五星级酒店一般无二的床品。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/window.jpg" alt="观景窗">
+        <div class="body">
+          <h3>每一扇窗都是风景</h3>
+          <p>每间客房都有正对风景的超大观景窗和独立休闲露台。躺在床上，就能看日出日落，云卷云舒。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/detail1.jpg" alt="床品细节">
+        <div class="body">
+          <h3>每一个细节，都为舒适而生</h3>
+          <p>金可儿床垫、80支贡缎床品、高端有机洗护、恒温地暖，室内始终保持最舒适的温度。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="split">
+      <div class="pic"><img src="images/bath.jpg" alt="独立卫浴"></div>
+      <div class="txt">
+        <h3>独立卫浴，荒野里的体面</h3>
+        <p>每间客房都有独立的干湿分离卫浴，24小时循环热水，大水压花洒——即使在海拔3200米的草原，你也能洗一个舒服的热水澡。</p>
+        <div class="num">24H HOT WATER · PRIVATE BATHROOM</div>
+      </div>
+    </div>
+
+    <div class="split">
+      <div class="txt">
+        <h3>客房露台</h3>
+        <p>180度无遮挡观景面，于1号客房实拍。日出、云海、草原、星空，都从这扇窗来到你面前。</p>
+        <div class="num">180° UNOBSTRUCTED VIEW</div>
+      </div>
+      <div class="pic"><img src="images/terrace1.jpg" alt="客房露台"></div>
+    </div>
+
+    <div class="mini">
+      <div class="item">
+        <img src="images/lobby1.jpg" alt="接待中心">
+        <b>接待中心</b>
+        <span>草原的会客厅 · 壁炉与落地窗</span>
+      </div>
+      <div class="item">
+        <img src="images/campfire2.jpg" alt="落日剧场">
+        <b>落日剧场</b>
+        <span>篝火 · 喝酒 · 谈天 · 歌唱</span>
+      </div>
+      <div class="item">
+        <img src="images/dining1.jpg" alt="餐厅">
+        <b>餐厅</b>
+        <span>用美食连接土地</span>
+      </div>
+      <div class="item">
+        <img src="images/coffee1.jpg" alt="黑帐篷咖啡吧">
+        <b>黑帐篷咖啡吧</b>
+        <span>给自己一点安静的时间</span>
+      </div>
+    </div>
+
+    <div class="split">
+      <div class="pic"><img src="images/morning.jpg" alt="没有闹钟的清晨"></div>
+      <div class="txt">
+        <h3>没有闹钟，只有阳光和鸟叫</h3>
+        <p>我们不会叫早，你想睡多久就睡多久。叫醒你的，会是阳光透过窗帘的缝隙，会是窗外的鸟叫，会是草原上的风声。</p>
+        <div class="num">WAKE UP NATURALLY</div>
+      </div>
+    </div>
+
+    <div class="split">
+      <div class="txt">
+        <h3>风景就是最好的节目</h3>
+        <p>我们特意取消电视和WiFi，希望你能放下手机，多看看窗外的风景，多和身边的人说说话，多听听草原的声音。</p>
+        <div class="num">NO TV · NO WIFI · JUST NATURE</div>
+      </div>
+      <div class="pic"><img src="images/slow.jpg" alt="放下手机"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 为什么是赛钦 -->
+<section class="banner" id="why">
+  <div class="wrap">
+    <h2>为什么是赛钦？</h2>
+    <p>赛钦营地位于甘加秘境景区核心草场，独拥赛钦圣湖，完整包含甘南喀斯特景观、原生湖泊、高原草场及生物种群，是当地藏族居民的信仰之地，也是甘青环线上的顶级珠宝。</p>
+    <p style="margin-top:10px;">营地居住区距夏河县城仅20分钟车程，距最近村落1公里——既保证绝对的私密与安静，又能方便抵达周边所有景点。</p>
+  </div>
+</section>
+
+<!-- 秘境周边 -->
+<section id="scenery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Around</div>
+      <h2>甘加 · 被遗忘的秘境</h2>
+      <div class="sub">甘南最后的小众秘境，离风景很近，离喧嚣很远</div>
+    </div>
+    <div class="spots">
+      <div class="spot">
+        <img src="images/fortress.jpg" alt="八角古城">
+        <div class="dist">5 km</div>
+        <div class="cap"><b>八角古城</b><span>两千年前的古要塞 · 营地东侧湖泊观景台</span></div>
+      </div>
+      <div class="spot">
+        <img src="images/cliff.jpg" alt="白石崖溶洞">
+        <div class="dist">8 km</div>
+        <div class="cap"><b>白石崖溶洞</b><span>世界最大白石崖溶洞 · 藏传佛教修行圣地</span></div>
+      </div>
+      <div class="spot">
+        <img src="images/labrang.jpg" alt="拉卜楞寺">
+        <div class="dist">38 km</div>
+        <div class="cap"><b>拉卜楞寺</b><span>世界藏学府 · 藏传佛教六大寺院之一</span></div>
+      </div>
+      <div class="spot">
+        <img src="images/flower.jpg" alt="桑科草原花季">
+        <div class="dist">25 km</div>
+        <div class="cap"><b>桑科草原花季</b><span>7月格桑花开 · 高原湿地</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 深度体验 -->
+<section class="stay" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Experience</div>
+      <h2>深度体验</h2>
+      <div class="sub">好的旅行，是让你忘记自己在旅行</div>
+    </div>
+    <div class="exp-grid">
+      <div class="exp">
+        <img src="images/guide.jpg" alt="像牧民一样行走">
+        <div class="body"><h3>像牧民一样行走</h3><p>我们的员工自小生长在这里，做你的向导，带你走草原上只有他们知道的小路，讲草原的故事与传说。</p></div>
+      </div>
+      <div class="exp">
+        <img src="images/ride1.jpg" alt="做一天草原的主人">
+        <div class="body"><h3>做一天草原的主人</h3><p>跟着骑马、放羊、打酥油茶、制作道食合，亲手体验最真实的牧民生活。</p></div>
+      </div>
+      <div class="exp">
+        <img src="images/temple.jpg" alt="求学藏文化最高学府">
+        <div class="body"><h3>求学藏文化最高学府</h3><p>走进藏传佛教最高学府，转世界上最长的转经道，聆听喇嘛辩经深藏的哲学。</p></div>
+      </div>
+      <div class="exp">
+        <img src="images/galaxy.jpg" alt="城市里看不见的银河">
+        <div class="body"><h3>城市里看不见的银河</h3><p>这里没有光污染，晴天的夜晚，能看见清晰的银河。</p></div>
+      </div>
+      <div class="exp">
+        <img src="images/clean.jpg" alt="和我们一起守护草原">
+        <div class="body"><h3>和我们一起守护草原</h3><p>去草原上捡垃圾、种当地的草种、给当地的孩子上课。旅行不只是看风景，也可以为这片土地做点什么。</p></div>
+      </div>
+      <div class="exp">
+        <img src="images/exp1.jpg" alt="体验的温度">
+        <div class="body"><h3>体验的温度</h3><p>这里的人有最干净的笑容。他们每天转经，相信众生平等，对自然充满敬畏。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 生态与社区 -->
+<section class="eco" id="eco">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag" style="color:var(--khaki);">Eco & Community</div>
+      <h2>生态与社区</h2>
+      <div class="sub">我们是客人，不是主人</div>
+    </div>
+    <div class="eco-grid">
+      <div class="eco-item">
+        <img src="images/eco.jpg" alt="零痕迹">
+        <div class="body"><h3>对生态：零痕迹是底线</h3><p>营地所有建筑采用可回收装配式结构，不破坏一寸草皮；所有垃圾100%带出草原处理；污水采用生物降解系统，不污染当地水源。</p></div>
+      </div>
+      <div class="eco-item">
+        <img src="images/wildlife.jpg" alt="野生动物">
+        <div class="body"><h3>我们是客人，不是主人</h3><p>营地区域设计野生动物通道，夜晚保留最低限度照明。赤麻鸭、黑颈鹤、土拨鼠、花斑裸鲤……赛钦营地已成为甘加草原生态保存最为完整的区域。</p></div>
+      </div>
+      <div class="eco-item">
+        <img src="images/staff.jpg" alt="本地员工">
+        <div class="body"><h3>留下游客，也留下当地青年</h3><p>90%的员工来自本地村镇，优先招聘建档立卡户，提供免费服务培训——让年轻人不用背井离乡，在家门口就有体面的收入。</p></div>
+      </div>
+      <div class="eco-item">
+        <img src="images/herder.jpg" alt="把收益还给草原">
+        <div class="body"><h3>把收益还给草原</h3><p>餐厅的牛羊肉、奶制品、青稞酒全部从当地牧民家采购；客人的体验项目优先与当地牧户合作，让每一笔消费都真正帮到当地人。</p></div>
+      </div>
+      <div class="eco-item">
+        <img src="images/study.jpg" alt="给孩子打开一扇窗">
+        <div class="body"><h3>给孩子打开一扇窗</h3><p>与当地教育部门共同开发研学课程，让城市的孩子了解草原文化，也把外面的世界展示给山里的孩子。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 朋友 -->
+<section class="friends">
+  <div class="wrap">
+    <h2>来过的人，都成了朋友</h2>
+    <p>很多客人来过一次，就成了赛钦的朋友。他们会每年都来，会带朋友来，会给我们寄礼物，会把这里当成自己在草原的家。</p>
+    <p style="margin-top:12px;">最好的旅行，不是你看过多少风景，是你遇见了多少人，留下了多少回忆。</p>
+  </div>
+</section>
+
+<!-- 联系预订 -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Contact</div>
+      <h2>联系预订</h2>
+      <div class="sub">自然主义生活方式 · 以最低限度介入，呈现草原上最好的款待</div>
+    </div>
+    <div class="contact-grid">
+      <div class="info">
+        <h3>甘加赛钦营地 SAIQIN CAMP</h3>
+        <div class="row">
+          <div class="k">预订电话</div>
+          <a class="phone" href="tel:09417241999">0941-7241999</a>
+        </div>
+        <div class="row">
+          <div class="k">地址</div>
+          <div class="v">甘肃省甘南州夏河县甘加镇赛钦营地</div>
+        </div>
+        <div class="row">
+          <div class="k">交通</div>
+          <div class="v">距夏河县城 20 分钟车程 · 距拉卜楞寺 38 km · 距白石崖 8 km</div>
+        </div>
+        <div class="row">
+          <div class="k">微信公众号</div>
+          <div class="v">西科文化旅游</div>
+        </div>
+      </div>
+      <div class="qr">
+        <img src="images/qrcode.jpg" alt="微信公众号二维码">
+        <div class="cap"><b>西科文化旅游</b>扫码关注 · 在线预订</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="brand">赛钦营地 SAIQIN CAMP</div>
+  <div class="slogan">不打扰 · 不将就</div>
+  <div class="line"></div>
+  <div class="copy">西科文旅丨敬畏作品 · 西科文化旅游发展有限公司</div>
+</footer>
+
+</body>
+</html>
